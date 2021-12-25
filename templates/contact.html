@@ -1,0 +1,22 @@
+
+{% extends "base.html" %}
+
+
+{% block content %}
+<h1>Contact Page</h1>
+<p>
+    {{ my_number }} is a developer
+</p>
+<h1>{{ my_name|center:"10   " }} </h1>
+<ul>
+{% for list in my_list %}
+    {% if list == 123 %}
+     <li> this is not the network</li>
+     <li> {{ forloop.counter}} - {{ list|add:list }}</li>
+    {% else %}
+    <li> {{ forloop.counter}} - {{ list}}</li>
+    {% endif %}
+{% endfor%}
+
+</ul>
+{% endblock %}
